@@ -437,7 +437,7 @@ export default function Home() {
                   </div>
                   <Link
                     href="/resources"
-                    className="rounded-full bg-[var(--accent-strong)] px-4 py-2 text-xs font-semibold text-white whitespace-nowrap hover:bg-[var(--accent)] transition"
+                    className="rounded-full bg-[var(--accent-strong)] px-4 py-2 text-xs font-semibold text-white whitespace-nowrap hover:bg-[var(--accent)] hover:text-white transition"
                   >
                     {item.cta}
                   </Link>
