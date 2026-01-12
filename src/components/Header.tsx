@@ -6,11 +6,10 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/products", label: "Products" },
-  { href: "/products/technical", label: "Technical" },
+  { href: "/capabilities", label: "Capabilities" },
+  { href: "/oem-export", label: "OEM & Export" },
   { href: "/about", label: "About" },
-  { href: "/industries", label: "Industries" },
-  { href: "/resources", label: "Resources" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact/RFQ" },
 ];
 
 const ctaHref = "/contact#rfq";

@@ -258,104 +258,67 @@ export default function Home() {
 
   return (
     <div className="space-y-20">
-      <section className="section-shell overflow-hidden rounded-3xl border border-[var(--border)] bg-white px-8 py-12 shadow-lg">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-6">
-            <div className="badge">Manufacturing Since 2014</div>
-            <h1 className="text-4xl font-semibold leading-tight text-[var(--paper)] md:text-5xl">
-              Welcome to SAK Fasteners LLP
-            </h1>
-            <p className="max-w-2xl text-lg text-[var(--muted)]">
-              SAK Fasteners LLP are leading manufacturers of metal & plastic fasteners since 2014. We distribute our products all across India and Middle East region. We manufacture Nylon Frame Fixing Anchor Fasteners, Plastic Wall Plugs, Self Tapping Screws in MS & SS 202 & SS 304, Self Drilling Screws, Wood Screws, Drywall Screws & Rack Bolts.
-            </p>
-            <div className="flex flex-wrap items-center gap-3 text-sm font-semibold">
-              <span className="rounded-full bg-[var(--accent)]/10 px-4 py-2 text-[var(--accent-strong)] border border-[var(--accent)]/20">Since 2014</span>
-              <span className="rounded-full bg-[var(--accent-strong)] px-4 py-2 text-white">Quality Assured</span>
-              <span className="rounded-full border border-[var(--border)] px-4 py-2 text-[var(--paper)]">100% Virgin Material</span>
-            </div>
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link
-                href="/contact#rfq"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent-strong)] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-[var(--accent)]/20 transition hover:bg-[var(--accent)]"
+      {/* Hero Section - Restructured */}
+      <section className="section-shell overflow-hidden rounded-3xl border border-[var(--border)] bg-gradient-to-br from-white via-[var(--bg)] to-white px-8 py-16 shadow-lg">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="badge mx-auto">Manufacturing Since 2014</div>
+          <h1 className="mt-4 text-4xl font-bold leading-tight text-[var(--paper)] md:text-5xl lg:text-6xl">
+            Vertically Integrated Fastener & Fixing Systems Manufacturer
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-xl text-[var(--muted)]">
+            Screws · Wall Plugs · Frame Anchors · OEM Private Label
+          </p>
+
+          {/* Capability Icons */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            {[
+              { icon: "🔨", label: "Cold Heading" },
+              { icon: "🔥", label: "Heat Treatment" },
+              { icon: "⚡", label: "Electro-Plating" },
+              { icon: "🧱", label: "Injection Molding" },
+              { icon: "📦", label: "OEM Packaging" },
+            ].map((capability) => (
+              <div
+                key={capability.label}
+                className="flex items-center gap-2 rounded-full border-2 border-[var(--accent)]/30 bg-white px-4 py-2 text-sm font-semibold text-[var(--paper)] shadow-sm"
               >
-                Contact Us
-                <span aria-hidden>→</span>
-              </Link>
-              <Link
-                href="/products"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] px-6 py-3 text-base font-semibold text-[var(--paper)] transition hover:border-[var(--accent)]"
-              >
-                View Products
-              </Link>
-            </div>
-            <div className="grid grid-cols-2 gap-6 border-t border-[var(--border)] pt-6 sm:grid-cols-4">
-              {[
-                { label: "Established", value: "2014" },
-                { label: "Product Range", value: "6+" },
-                { label: "Markets", value: "India + ME" },
-                { label: "Quality", value: "100%" },
-              ].map((item) => (
-                <div key={item.label} className="space-y-1">
-                  <div className="text-lg font-semibold text-[var(--accent-strong)]">{item.value}</div>
-                  <div className="text-xs uppercase tracking-[0.08em] text-[var(--muted)]">{item.label}</div>
-                </div>
-              ))}
-            </div>
+                <span className="text-lg">{capability.icon}</span>
+                <span>✓ {capability.label}</span>
+              </div>
+            ))}
           </div>
-          <div className="card-surface rounded-2xl p-6">
-            <div className="mb-4 flex items-center justify-between">
-              <span className="text-sm font-semibold text-[var(--paper)]">Product Inquiry</span>
-              <span className="text-xs text-[var(--muted)]">Get in touch</span>
-            </div>
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-[0.08em] text-[var(--muted)]">Product Type</label>
-                <select className="w-full rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--paper)] outline-none focus:border-[var(--accent)]">
-                  <option>Nylon Frame Anchors</option>
-                  <option>Plastic Wall Plugs</option>
-                  <option>Self Drilling Screws</option>
-                  <option>Self Tapping Screws</option>
-                  <option>Drywall Screws</option>
-                  <option>Rack Bolts</option>
-                </select>
+
+          {/* Dual CTAs */}
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contact#rfq"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent-strong)] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[var(--accent)]/30 transition hover:bg-[var(--accent)]"
+            >
+              Request Quotation
+              <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href="/oem-export"
+              className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[var(--accent-strong)] px-8 py-4 text-lg font-semibold text-[var(--accent-strong)] transition hover:bg-[var(--accent)]/5"
+            >
+              OEM Inquiry
+              <span aria-hidden>→</span>
+            </Link>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="mt-12 grid grid-cols-2 gap-6 border-t border-[var(--border)] pt-8 sm:grid-cols-4">
+            {[
+              { label: "Production Capacity", value: "100 T/mo" },
+              { label: "Export Markets", value: "ME + Africa" },
+              { label: "Machinery Lines", value: "12 Heading" },
+              { label: "OEM Capability", value: "Private Label" },
+            ].map((item) => (
+              <div key={item.label} className="space-y-1">
+                <div className="text-2xl font-bold text-[var(--accent-strong)]">{item.value}</div>
+                <div className="text-xs uppercase tracking-[0.08em] text-[var(--muted)]">{item.label}</div>
               </div>
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-[0.08em] text-[var(--muted)]">Material</label>
-                <select className="w-full rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--paper)] outline-none focus:border-[var(--accent)]">
-                  <option>MS (Mild Steel)</option>
-                  <option>Stainless Steel 304</option>
-                  <option>Stainless Steel 316</option>
-                  <option>Plastic (HDPE)</option>
-                  <option>Nylon</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-[0.08em] text-[var(--muted)]">Finish</label>
-                <select className="w-full rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--paper)] outline-none focus:border-[var(--accent)]">
-                  <option>Silver Zinc Plating</option>
-                  <option>Black Zinc</option>
-                  <option>Chrome Shine</option>
-                  <option>Plain/Natural</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs uppercase tracking-[0.08em] text-[var(--muted)]">Quantity</label>
-                <input
-                  className="w-full rounded-xl border border-[var(--border)] bg-[var(--surface)] px-4 py-3 text-sm text-[var(--paper)] outline-none focus:border-[var(--accent)]"
-                  placeholder="500"
-                  type="number"
-                />
-              </div>
-              <Link
-                href="/contact#rfq"
-                className="flex items-center justify-center gap-2 rounded-xl bg-[var(--accent-strong)] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-[var(--accent)]/20 transition hover:bg-[var(--accent)]"
-              >
-                Submit Inquiry <span aria-hidden>→</span>
-              </Link>
-              <p className="text-xs text-[var(--muted)]">
-                Tell us your requirements and quantity. We&apos;ll get back to you with pricing and availability.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

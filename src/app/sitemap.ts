@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.sakfasteners.com";
-  const routes = ["", "/products", "/products/technical", "/industries", "/resources", "/contact", "/about"];
+  const routes = ["", "/products", "/products/technical", "/capabilities", "/oem-export", "/about", "/contact"];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
