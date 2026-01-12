@@ -225,7 +225,7 @@ export default function ContactPage() {
 
             <button
               type="submit"
-              className="w-full rounded-full bg-[var(--accent-strong)] px-6 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-[var(--accent)] hover:text-white"
+              className="w-full rounded-full bg-[var(--accent-strong)] px-6 py-4 text-lg font-semibold !text-white shadow-lg transition hover:bg-[var(--accent)] hover:!text-white"
             >
               Submit RFQ → Get Quote in 24 Hours
             </button>

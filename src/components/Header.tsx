@@ -66,7 +66,7 @@ export function Header() {
           </a>
           <Link
             href={ctaHref}
-            className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-[var(--accent)]/25 transition hover:bg-[var(--accent-strong)] hover:text-white"
+            className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-semibold !text-white shadow-lg shadow-[var(--accent)]/25 transition hover:bg-[var(--accent-strong)] hover:!text-white"
           >
             Request a quote
           </Link>

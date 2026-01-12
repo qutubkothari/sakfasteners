@@ -88,7 +88,7 @@ export default function ProductsPage() {
           </Link>
           <Link
             href="/oem-export"
-            className="rounded-full bg-[var(--accent-strong)] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[var(--accent)] hover:text-white"
+            className="rounded-full bg-[var(--accent-strong)] px-5 py-2 text-sm font-semibold !text-white transition hover:bg-[var(--accent)] hover:!text-white"
           >
             OEM & Export Info →
           </Link>
