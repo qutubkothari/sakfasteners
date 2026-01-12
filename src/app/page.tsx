@@ -292,7 +292,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contact#rfq"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent-strong)] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[var(--accent)]/30 transition hover:bg-[var(--accent)]"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent-strong)] px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-[var(--accent)]/30 transition hover:bg-[var(--accent)] hover:text-white"
             >
               Request Quotation
               <span aria-hidden>→</span>
