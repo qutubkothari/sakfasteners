@@ -1,26 +1,85 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #f8f7f5;
+  --panel: #ffffff;
+  --paper: #1a1a1a;
+  --ink: #0f1115;
+  --accent: #7c1d2e;
+  --accent-strong: #8f1d2e;
+  --muted: #6b7280;
+  --grid-line: rgba(124, 29, 46, 0.08);
+  --surface: #fefefe;
+  --border: rgba(124, 29, 46, 0.12);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg);
+  --color-foreground: var(--paper);
+  --color-panel: var(--panel);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at 20% 20%, rgba(124, 29, 46, 0.04), transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(124, 29, 46, 0.06), transparent 35%),
+    linear-gradient(135deg, #fafaf9 0%, #f5f4f2 50%, #fafaf9 100%);
+  color: var(--paper);
+  font-family: var(--font-body), system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.section-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, transparent 0%, var(--grid-line) 50%, transparent 100%);
+  background-size: 220px 1px;
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.card-surface {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.95), rgba(254, 254, 254, 0.9));
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(124, 29, 46, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.badge {
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: rgba(124, 29, 46, 0.08);
+  color: var(--accent-strong);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }

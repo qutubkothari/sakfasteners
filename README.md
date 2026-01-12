@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SAK Fasteners Website
 
-## Getting Started
+Maroon/red/white 2026-styled site for SAK Fasteners. Built with Next.js (App Router), TypeScript, and Tailwind v4 for speed, SEO/AEO readiness, and geo-friendly contact flows.
 
-First, run the development server:
+## Tech Stack
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4 (utility-first, inline theme tokens)
+- next/font with Space Grotesk (display) and Manrope (body)
+- JSON-LD schema (FAQ + Organization), sitemap.xml, robots.txt
 
+## Local Development
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Visit http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Production Build
+```bash
+npm run build
+npm start
+```
+`npm start` runs the built app on port 3000. For Hostinger VPS, point your reverse proxy (e.g., Nginx) to http://127.0.0.1:3000 and serve https://www.sakfasteners.com via TLS. Keep `baseUrl` values in layout.tsx, sitemap.ts, and robots.txt/route.ts aligned with the live domain.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
+- Home: hero, spec picker, product highlights, industries, geo coverage, RFQ CTA, FAQ (AEO-friendly)
+- /products: category cards and stocking philosophy
+- /industries: sector-specific needs and solutions
+- /resources: torque charts, coating and material guides, micro FAQ
+- /contact: RFQ form, geo hubs (Houston/Dubai/Mumbai), NAP consistency
+- SEO: Open Graph/Twitter metadata, JSON-LD (FAQ + Organization), sitemap.xml, robots.txt
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Content / Design Notes
+- Theme tokens in globals.css (maroon/red/white, glass panels, grid texture)
+- Header/footer carry CTA, phone, email, and location signals for GEO strength
+- FAQs and resource callouts are phrased for featured snippets/voice answers
 
-## Learn More
+## Next Steps
+- Replace placeholder contact numbers/emails as needed.
+- Add real assets for /og-image.png and /logo.png in public/ before launch.
+- If you need CMS or MDX content, add a headless CMS and map fields into the existing sections.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

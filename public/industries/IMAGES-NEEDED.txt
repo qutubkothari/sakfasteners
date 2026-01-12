@@ -1,0 +1,17 @@
+SAK Fasteners - Industry Images
+=================================
+
+Place your industry application images in this directory with the following filenames:
+
+1. construction.jpg - Construction & Infrastructure projects
+2. electrical.jpg - Electrical & Sanitary installations
+3. furniture.jpg - Furniture & Interior applications
+4. upvc.jpg - uPVC & Window Systems
+
+Recommended specifications:
+- Format: JPG or PNG
+- Dimensions: 1200x900 pixels (4:3 aspect ratio)
+- File size: Under 500KB for optimal web performance
+- Show fasteners in real-world application contexts
+
+The Next.js Image component will automatically optimize these images for different screen sizes.

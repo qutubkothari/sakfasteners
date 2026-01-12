@@ -1,0 +1,27 @@
+SAK Fasteners - Factory & Manufacturing Images
+================================================
+
+Place your factory and manufacturing facility images in this directory:
+
+REQUIRED IMAGES:
+1. production-floor.jpg - Main manufacturing floor with machinery
+2. quality-control.jpg - QC lab with testing equipment
+3. raw-material-storage.jpg - Climate-controlled warehouse
+4. injection-molding.jpg - Plastic fastener molding machines
+5. threading-machines.jpg - Metal screw production equipment
+6. plating-unit.jpg - Surface treatment and finishing area
+
+OPTIONAL IMAGES:
+- team-photo.jpg - Factory workers and management
+- warehouse.jpg - Finished goods storage
+- dispatch-center.jpg - Packaging and shipping area
+- certification-display.jpg - Quality certificates on wall
+
+IMAGE SPECIFICATIONS:
+- Format: JPG or PNG
+- Dimensions: 1200x800px minimum
+- File size: Under 500KB each
+- Lighting: Well-lit professional photography
+- Content: Clean, organized, professional appearance
+
+These images will be displayed on the About page to showcase manufacturing capabilities and build customer trust.
