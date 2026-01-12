@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "SAK Fasteners LLP | Metal & Plastic Fasteners Manufacturer Since 2014",
   description:
     "SAK Fasteners LLP manufactures metal & plastic fasteners including Nylon Frame Fixing Anchors, Plastic Wall Plugs, Self Tapping Screws, Self Drilling Screws, Drywall Screws & Rack Bolts. Serving India and Middle East.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   keywords: [
     "fasteners manufacturer India",
     "fasteners manufacturer Pune",
