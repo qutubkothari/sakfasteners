@@ -43,6 +43,15 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+    emails: ["qutub@sakfasteners.com"],
+    phoneNumbers: ["+91-9860040321"],
+  },
+  other: {
+    "article:publisher": "SAK Fasteners LLP",
+    "article:modified_time": new Date().toISOString(),
+    "og:locality": "Pune",
+    "og:region": "Maharashtra",
+    "og:country-name": "India",
   },
   twitter: {
     card: "summary_large_image",

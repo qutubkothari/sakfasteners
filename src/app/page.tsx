@@ -243,6 +243,19 @@ export default function Home() {
     })),
   };
 
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://www.sakfasteners.com/#website',
+    url: 'https://www.sakfasteners.com',
+    name: 'SAK Fasteners LLP',
+    description: 'Leading manufacturer of metal and plastic fasteners serving India and Middle East since 2014',
+    publisher: {
+      '@id': 'https://www.sakfasteners.com/#organization',
+    },
+    inLanguage: 'en-US',
+  };
+
   return (
     <div className="space-y-20">
       <section className="section-shell overflow-hidden rounded-3xl border border-[var(--border)] bg-white px-8 py-12 shadow-lg">
@@ -581,6 +594,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
       />
     </div>
   );
