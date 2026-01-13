@@ -6,7 +6,8 @@ const productCategories = [
     title: "Nylon Frame Anchors",
     specs: "8mm & 10mm sizes, 100% virgin plastic material",
     highlight: "Rust-proof fixing solutions for masonry and concrete applications.",
-    img: "/products/nylon-anchors.jpg",
+    img: "/products/nylon-anchors-small.jpg",
+    hoverImg: "/products/nylon-anchors.jpg",
   },
   {
     title: "Plastic Wall Plugs",
@@ -362,7 +363,7 @@ export default function Home() {
                     {/* Hover Popup - 800x600px */}
                     <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
                       <img
-                        src={item.img}
+                        src={item.hoverImg || item.img}
                         alt={item.title}
                         className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg"
                       />
