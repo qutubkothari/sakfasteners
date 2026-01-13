@@ -354,25 +354,25 @@ export default function Home() {
             <div key={item.title} className="card-surface rounded-2xl overflow-visible group relative">
               <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer">
                 {item.img ? (
-                  <>
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-contain"
-                    />
-                    {/* Hover Popup - 800x600px */}
-                    <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
-                      <img
-                        src={item.hoverImg || item.img}
-                        alt={item.title}
-                        className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg"
-                      />
-                    </div>
-                  </>
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-contain"
+                  />
                 ) : (
                   <span className="text-sm text-[var(--muted)]">Product Image</span>
                 )}
               </div>
+              {/* Hover Popup - Positioned relative to card */}
+              {item.img && (
+                <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
+                  <img
+                    src={item.hoverImg || item.img}
+                    alt={item.title}
+                    className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                  />
+                </div>
+              )}
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -408,25 +408,25 @@ export default function Home() {
             <div key={item.name} className="card-surface rounded-2xl overflow-visible group relative">
               <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer">
                 {item.img ? (
-                  <>
-                    <img
-                      src={item.img}
-                      alt={item.name}
-                      className="w-full h-full object-contain"
-                    />
-                    {/* Hover Popup - 800x600px */}
-                    <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
-                      <img
-                        src={item.img}
-                        alt={item.name}
-                        className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg"
-                      />
-                    </div>
-                  </>
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-full object-contain"
+                  />
                 ) : (
                   <span className="text-sm text-[var(--muted)]">Industry Image</span>
                 )}
               </div>
+              {/* Hover Popup - Positioned relative to card */}
+              {item.img && (
+                <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                  />
+                </div>
+              )}
               <div className="p-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold text-[var(--paper)]">{item.name}</h3>
