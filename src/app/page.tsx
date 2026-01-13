@@ -351,14 +351,16 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {productCategories.map((item) => (
             <div key={item.title} className="card-surface rounded-2xl overflow-hidden">
-              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center">
-                {/* <Image
-                  src={item.img}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                /> */}
-                <span className="text-sm text-[var(--muted)]">Product Image</span>
+              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden">
+                {item.img ? (
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-sm text-[var(--muted)]">Product Image</span>
+                )}
               </div>
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
@@ -393,14 +395,16 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {industries.map((item) => (
             <div key={item.name} className="card-surface rounded-2xl overflow-hidden">
-              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center">
-                {/* <Image
-                  src={item.img}
-                  alt={item.name}
-                  fill
-                  className="object-cover"
-                /> */}
-                <span className="text-sm text-[var(--muted)]">Industry Image</span>
+              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden">
+                {item.img ? (
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-sm text-[var(--muted)]">Industry Image</span>
+                )}
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between">
