@@ -359,12 +359,12 @@ export default function Home() {
                       alt={item.title}
                       className="w-full h-full object-contain"
                     />
-                    {/* Hover Overlay - Expands Outside Card */}
+                    {/* Hover Overlay - Fixed 800x600px */}
                     <div className="fixed inset-0 bg-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-8 pointer-events-none group-hover:pointer-events-auto z-50">
                       <img
                         src={item.img}
                         alt={item.title}
-                        className="max-w-4xl max-h-[80vh] w-auto h-auto object-contain"
+                        className="w-[800px] h-[600px] object-contain"
                       />
                     </div>
                   </>
@@ -413,12 +413,12 @@ export default function Home() {
                       alt={item.name}
                       className="w-full h-full object-contain"
                     />
-                    {/* Hover Overlay - Expands Outside Card */}
+                    {/* Hover Overlay - Fixed 800x600px */}
                     <div className="fixed inset-0 bg-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-8 pointer-events-none group-hover:pointer-events-auto z-50">
                       <img
                         src={item.img}
                         alt={item.name}
-                        className="max-w-4xl max-h-[80vh] w-auto h-auto object-contain"
+                        className="w-[800px] h-[600px] object-contain"
                       />
                     </div>
                   </>
