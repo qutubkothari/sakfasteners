@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "./Logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -31,7 +30,13 @@ export function Header() {
       </div>
       <div className="mx-auto flex max-w-6xl items-center gap-6 px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <Logo />
+          <img 
+            src="/logo.png" 
+            alt="SAK Fasteners Logo" 
+            className="h-12 w-12 object-contain"
+            width={48}
+            height={48}
+          />
           <div className="leading-tight">
             <div className="text-base font-semibold tracking-tight text-[var(--paper)]">SAK Fasteners</div>
             <div className="text-sm text-[var(--muted)]">Metal & Plastic Fasteners</div>
