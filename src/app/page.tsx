@@ -261,11 +261,12 @@ export default function Home() {
       {/* Animated Banner Image */}
       <section className="overflow-hidden rounded-3xl border border-[var(--border)] shadow-lg">
         <img 
-          src="/hero/products.gif?v=2" 
+          src="/hero/products.gif?v=639039425262350067" 
           alt="SAK Fasteners - Drywall Screws Manufacturing"
           className="w-full h-auto object-cover"
           style={{ maxHeight: "700px" }}
           loading="eager"
+          key="hero-banner-gif"
         />
       </section>
 
