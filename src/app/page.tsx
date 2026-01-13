@@ -357,7 +357,7 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {productCategories.map((item) => (
             <div key={item.title} className="card-surface rounded-2xl overflow-visible group relative">
-              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer">
+              <div className="relative h-64 bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer p-4">
                 {item.img ? (
                   <img
                     src={item.img}
