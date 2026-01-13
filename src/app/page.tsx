@@ -350,14 +350,24 @@ export default function Home() {
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {productCategories.map((item) => (
-            <div key={item.title} className="card-surface rounded-2xl overflow-hidden">
-              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden">
+            <div key={item.title} className="card-surface rounded-2xl overflow-hidden group">
+              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-zoom-in">
                 {item.img ? (
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
+                  <>
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                    {/* Hover Overlay - Full Image */}
+                    <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-2xl">
+                      <img
+                        src={item.img}
+                        alt={item.title}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                  </>
                 ) : (
                   <span className="text-sm text-[var(--muted)]">Product Image</span>
                 )}
@@ -395,13 +405,23 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {industries.map((item) => (
             <div key={item.name} className="card-surface rounded-2xl overflow-hidden">
-              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden">
+              <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-zoom-in">
                 {item.img ? (
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <>
+                    <img
+                      src={item.img}
+                      alt={item.name}
+                      className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                    />
+                    {/* Hover Overlay - Full Image */}
+                    <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-2xl">
+                      <img
+                        src={item.img}
+                        alt={item.name}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                  </>
                 ) : (
                   <span className="text-sm text-[var(--muted)]">Industry Image</span>
                 )}
