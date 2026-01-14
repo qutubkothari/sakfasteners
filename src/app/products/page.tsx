@@ -4,7 +4,26 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Products | SAK Fasteners - Screws & Plastic Fixings",
   description: "Wood Screws, Chipboard Screws, Drywall Screws, Self-Tapping Screws | Fischer-Pattern Wall Plugs, Frame Anchors. Vertically integrated manufacturing from SAE 1008/1018 steel.",
-  keywords: ["wood screws", "chipboard screws", "drywall screws", "self-tapping screws", "wall plugs", "frame anchors", "fasteners manufacturer"],
+  keywords: [
+    "wood screws",
+    "chipboard screws",
+    "drywall screws",
+    "self-tapping screws",
+    "wall plugs",
+    "frame anchors",
+    "fasteners manufacturer",
+    // Nylon Frame Fixing synonyms & sizes
+    "Nylon Anchor",
+    "Nylon Frame Anchor",
+    "NFF",
+    "Nylon Frame Fixing",
+    "Nylon Frame Fixing Anchor Fasteners",
+    "Nylon Gitti",
+    "uPVC Doors and Windows Fasteners",
+    "8x80 NFF",
+    "8x100 NFF",
+    "10x100 NFF",
+  ],
   alternates: {
     canonical: "https://www.sakfasteners.com/products",
   },

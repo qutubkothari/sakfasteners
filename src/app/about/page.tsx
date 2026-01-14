@@ -4,14 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About SAK Fasteners LLP | Metal & Plastic Fasteners Manufacturer Since 2014",
   description:
-    "SAK Fasteners LLP: ISO-focused manufacturer in Pune, India. 100% virgin materials, quality testing, IndiaMART & JustDial verified. Serving construction, uPVC, electrical industries across India and Middle East.",
-  keywords: ["SAK Fasteners company", "fasteners manufacturer Pune", "quality fasteners India", "IndiaMART fasteners", "ISO fastener manufacturer"],
+    "SAK Fasteners LLP: ISO-focused manufacturer in Ahmedabad, India. 100% virgin materials, quality testing, IndiaMART & JustDial verified. Serving construction, uPVC, electrical industries across India and Middle East.",
+  keywords: ["SAK Fasteners company", "fasteners manufacturer Ahmedabad", "quality fasteners India", "IndiaMART fasteners", "ISO fastener manufacturer"],
   alternates: {
     canonical: "https://www.sakfasteners.com/about",
   },
   openGraph: {
     title: "About SAK Fasteners | Trusted Manufacturer Since 2014",
-    description: "Leading manufacturer of metal & plastic fasteners with state-of-the-art facility in Pune. Quality-driven, customer-focused, industry-verified.",
+    description: "Leading manufacturer of metal & plastic fasteners with state-of-the-art facility in Ahmedabad. Quality-driven, customer-focused, industry-verified.",
     url: "https://www.sakfasteners.com/about",
   },
 };
@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="badge">About Us</div>
         <h1 className="mt-3 text-4xl font-semibold">Manufacturing Excellence Since 2014</h1>
         <p className="mt-4 max-w-3xl text-lg text-[var(--muted)]">
-          SAK Fasteners LLP is a trusted name in the fasteners industry, specializing in the manufacture of high-quality metal and plastic fastening solutions. With our state-of-the-art manufacturing facility in Pune, Maharashtra, we serve construction, sanitary, electrical, and industrial sectors across India and the Middle East.
+          SAK Fasteners LLP is a trusted name in the fasteners industry, specializing in the manufacture of high-quality metal and plastic fastening solutions. With our state-of-the-art manufacturing facility in Ahmedabad, Gujarat, we serve construction, sanitary, electrical, and industrial sectors across India and the Middle East.
         </p>
       </header>
 

@@ -9,7 +9,8 @@ const quickLinks = [
 ];
 
 const geoLinks = [
-  { city: "Pune, India", href: "/contact#pune" },
+  { city: "Ahmedabad, India", href: "/contact#ahmedabad" },
+  { city: "Dubai, UAE", href: "/contact#dubai" },
   { city: "Middle East", href: "/contact#middleeast" },
 ];
 

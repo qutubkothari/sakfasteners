@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact SAK Fasteners | Request Quote, Product Inquiry, Support",
-  description: "Contact SAK Fasteners LLP for product quotes, bulk orders, and technical support. Phone: +91-91068-86259 | Email: info@sakfasteners.com | Pune, India office.",
-  keywords: ["contact SAK Fasteners", "fastener quote request", "bulk order inquiry", "Pune fasteners supplier", "India Middle East fasteners"],
+  description: "Contact SAK Fasteners LLP for product quotes, bulk orders, and technical support. Phone: +91 7737835253 | WhatsApp: +91 9106886259 | Ahmedabad, India & Dubai, UAE offices.",
+  keywords: ["contact SAK Fasteners", "fastener quote request", "bulk order inquiry", "Ahmedabad fasteners supplier", "Dubai UAE fasteners", "India Middle East fasteners"],
   alternates: {
     canonical: "https://www.sakfasteners.com/contact",
   },

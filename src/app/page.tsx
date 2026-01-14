@@ -112,14 +112,14 @@ const faqs = [
 
 const geoLocations = [
   {
-    id: "pune",
-    city: "Pune, India",
+    id: "ahmedabad",
+    city: "Ahmedabad, India",
     note: "Head office and manufacturing facility",
   },
   {
-    id: "middleeast",
-    city: "Middle East",
-    note: "Regional distribution and support",
+    id: "dubai",
+    city: "Dubai, UAE",
+    note: "Branch office and regional support",
   },
 ];
 
@@ -143,17 +143,24 @@ export default function Home() {
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+91-91068-86259',
+        telephone: '+91 7737835253',
         contactType: 'sales',
         areaServed: ['IN', 'AE', 'SA', 'OM'],
-        availableLanguage: ['English', 'Hindi'],
+        availableLanguage: ['English', 'Hindi', 'Arabic'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+971 507055253',
+        contactType: 'sales',
+        areaServed: ['AE', 'SA', 'OM'],
+        availableLanguage: ['English', 'Arabic'],
       },
     ],
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Shed No 32, Next to Mohan Marble, Pisoli',
-      addressLocality: 'Pune',
-      postalCode: '411048',
+      streetAddress: '60, Chirag Estate, CTM',
+      addressLocality: 'Ahmedabad',
+      postalCode: '380018',
       addressCountry: 'IN',
     },
     sameAs: [
@@ -170,19 +177,19 @@ export default function Home() {
     description: 'Leading manufacturer of metal and plastic fasteners including Nylon Frame Anchors, Plastic Wall Plugs, Self Tapping Screws, Self Drilling Screws, Drywall Screws and Rack Bolts serving India and Middle East since 2014.',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Shed No 32, Next to Mohan Marble, Pisoli',
-      addressLocality: 'Pune',
-      addressRegion: 'Maharashtra',
-      postalCode: '411048',
+      streetAddress: '60, Chirag Estate, CTM',
+      addressLocality: 'Ahmedabad',
+      addressRegion: 'Gujarat',
+      postalCode: '380018',
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '18.4574',
-      longitude: '73.9530',
+      latitude: '23.0225',
+      longitude: '72.5714',
     },
     url: 'https://www.sakfasteners.com',
-    telephone: '+91-91068-86259',
+    telephone: '+91 7737835253',
     email: 'info@sakfasteners.com',
     priceRange: '₹₹',
     openingHoursSpecification: [
@@ -236,6 +243,21 @@ export default function Home() {
         '@type': 'Product',
         name: product.title,
         description: product.highlight,
+        // Add AEO-friendly synonyms and size variants for Nylon Frame Anchors
+        ...(product.title === 'Nylon Frame Anchors'
+          ? {
+              alternateName: [
+                'Nylon Anchor',
+                'Nylon Frame Anchor',
+                'NFF',
+                'Nylon Frame Fixing',
+                'Nylon Frame Fixing Anchor Fasteners',
+                'Nylon Gitti',
+                'uPVC Doors and Windows Fasteners',
+              ],
+              size: ['8x80', '8x100', '10x100'],
+            }
+          : {}),
         offers: {
           '@type': 'AggregateOffer',
           priceCurrency: 'INR',
@@ -502,7 +524,7 @@ export default function Home() {
             <div className="badge">Service Coverage</div>
             <h2 className="text-3xl font-semibold">Serving India & Middle East</h2>
             <p className="max-w-2xl text-[var(--muted)]">
-              With our manufacturing base in Pune and regional distribution, we ensure timely delivery across all markets.
+              With our manufacturing base in Ahmedabad and regional distribution through Dubai, we ensure timely delivery across all markets.
             </p>
           </div>
           <Link href="/contact" className="text-sm font-semibold text-[var(--paper)] underline underline-offset-8">

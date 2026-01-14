@@ -63,7 +63,7 @@ export default function OEMExportPage() {
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent)] text-sm font-bold text-white">1</span>
                 <div>
                   <div className="font-semibold text-[var(--paper)]">Nhava Sheva (JNPT)</div>
-                  <div className="text-xs text-[var(--muted)]">Primary export port | 160km from Pune</div>
+                  <div className="text-xs text-[var(--muted)]">Primary export port | 400km from Ahmedabad</div>
                 </div>
               </div>
               <div className="flex items-center gap-3">
