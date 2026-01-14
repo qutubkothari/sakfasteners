@@ -231,8 +231,6 @@ export default function ProductsPage() {
                   )}
                 </div>
               )}
-                />
-              )}
               <div className="flex items-start justify-between">
                 <h3 className="text-2xl font-semibold text-blue-800">{product.name}</h3>
                 <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white">
