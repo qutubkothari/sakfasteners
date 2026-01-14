@@ -212,9 +212,9 @@ export default function ProductsPage() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {plasticProducts.map((product, i) => (
-            <div key={i} className="card-surface rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50/50 to-white p-6 transition hover:border-blue-300 group relative">
+            <div key={i} className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-6 transition hover:border-[var(--accent)]/40 group relative">
               {product.img && (
-                <div className="relative aspect-video bg-gradient-to-br from-blue-100/20 to-transparent flex items-center justify-center overflow-hidden cursor-pointer mb-4 rounded-lg">
+                <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer mb-4 rounded-lg">
                   <img 
                     src={product.img} 
                     alt={product.name}
@@ -232,35 +232,35 @@ export default function ProductsPage() {
                 </div>
               )}
               <div className="flex items-start justify-between">
-                <h3 className="text-2xl font-semibold text-blue-800">{product.name}</h3>
-                <span className="rounded-full bg-blue-600 px-3 py-1 text-xs font-bold text-white">
+                <h3 className="text-2xl font-semibold text-[var(--accent-strong)]">{product.name}</h3>
+                <span className="rounded-full bg-[var(--accent)] px-3 py-1 text-xs font-bold text-white">
                   Virgin Grade
                 </span>
               </div>
 
               <div className="mt-4 space-y-2 text-sm">
-                <div className="flex justify-between border-b border-blue-200 pb-2">
+                <div className="flex justify-between border-b border-[var(--border)] pb-2">
                   <span className="font-semibold text-[var(--muted)]">Material:</span>
                   <span className="font-mono text-[var(--paper)]">{product.material}</span>
                 </div>
-                <div className="flex justify-between border-b border-blue-200 pb-2">
+                <div className="flex justify-between border-b border-[var(--border)] pb-2">
                   <span className="font-semibold text-[var(--muted)]">Sizes:</span>
                   <span className="font-mono text-[var(--paper)]">{product.sizes}</span>
                 </div>
-                <div className="flex justify-between border-b border-blue-200 pb-2">
+                <div className="flex justify-between border-b border-[var(--border)] pb-2">
                   <span className="font-semibold text-[var(--muted)]">Load Capacity:</span>
                   <span className="font-mono text-[var(--paper)]">{product.loadCapacity}</span>
                 </div>
               </div>
 
-              <div className="mt-4 rounded-lg bg-blue-100 p-3">
-                <div className="text-xs font-semibold uppercase text-blue-900">Applications:</div>
-                <div className="mt-1 text-sm text-blue-700">{product.applications}</div>
+              <div className="mt-4 rounded-lg bg-[var(--accent)]/5 p-3">
+                <div className="text-xs font-semibold uppercase text-[var(--accent-strong)]">Applications:</div>
+                <div className="mt-1 text-sm text-[var(--muted)]">{product.applications}</div>
               </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {product.features.map((feature, idx) => (
-                  <span key={idx} className="rounded-full bg-white px-3 py-1 text-xs text-blue-800 shadow-sm">
+                  <span key={idx} className="rounded-full bg-white px-3 py-1 text-xs text-[var(--paper)] shadow-sm">
                     ✓ {feature}
                   </span>
                 ))}
