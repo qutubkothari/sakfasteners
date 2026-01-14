@@ -3,6 +3,7 @@ import { Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { ChatWidget } from "@/components/ChatWidget";
 
 const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
 const body = Manrope({ subsets: ["latin"], variable: "--font-body" });
@@ -100,6 +101,7 @@ export default function RootLayout({
           <Header />
           <main className="mx-auto max-w-6xl px-6 pb-16 pt-10">{children}</main>
           <Footer />
+          <ChatWidget />
         </div>
       </body>
     </html>
