@@ -143,8 +143,8 @@ export async function POST(req: Request) {
       },
     });
 
-    const autoPhone = !thread.phone && extractPhone(body.message);
-    const autoEmail = !thread.email && extractEmail(body.message);
+    const autoPhone = !thread.phone ? extractPhone(body.message) : undefined;
+    const autoEmail = !thread.email ? extractEmail(body.message) : undefined;
     if (autoPhone || autoEmail || sanitizedName || sanitizedPhone || sanitizedEmail) {
       await prisma.thread.update({
         where: { id: thread.id },
