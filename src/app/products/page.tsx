@@ -140,16 +140,16 @@ export default function ProductsPage() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {screwProducts.map((product, i) => (
-            <div key={i} className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-6 transition hover:border-[var(--accent)]/40 group relative">
+            <div key={i} className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-6 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
               {product.img && (
-                <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer mb-4 rounded-lg">
+                <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer mb-4 rounded-lg">
                   <img 
                     src={product.img} 
                     alt={product.name}
                     className="w-full h-full object-contain"
                   />
                   {product.hoverImg && (
-                    <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
+                    <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
                       <img
                         src={product.hoverImg}
                         alt={product.name}
@@ -212,16 +212,16 @@ export default function ProductsPage() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {plasticProducts.map((product, i) => (
-            <div key={i} className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-6 transition hover:border-[var(--accent)]/40 group relative">
+            <div key={i} className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-6 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
               {product.img && (
-                <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer mb-4 rounded-lg">
+                <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer mb-4 rounded-lg">
                   <img 
                     src={product.img} 
                     alt={product.name}
                     className="w-full h-full object-contain"
                   />
                   {product.hoverImg && (
-                    <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
+                    <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
                       <img
                         src={product.hoverImg}
                         alt={product.name}
