@@ -16,18 +16,19 @@ export const metadata: Metadata = {
 
 const locations = [
   {
-    id: "pune",
-    city: "Pune, India (Head Office)",
-    address: "Shed No 32, Next to Mohan Marble, Pisoli, Pune-411048",
-    phone: "+91 91068 86259",
-    email: "info@sakfasteners.com",
+    id: "ahmedabad",
+    city: "Ahmedabad, India (Head Office)",
+    address: "60, Chirag Estate, CTM, Ahmedabad-380018",
+    phone: "+91 7737835253",
+    whatsapp: "+91 9106886259",
+    email: "sales@sakfasteners.com",
   },
   {
-    id: "alternate",
-    city: "Alternate Contact",
-    address: "Pune, Maharashtra, India",
-    phone: "+91 96654 52053",
-    email: "info@saksolution.com",
+    id: "dubai",
+    city: "Dubai, United Arab Emirates (Branch Office)",
+    address: "310, Dubai Silicon Oasis, Dubai, UAE",
+    phone: "+971 507055253",
+    email: "sales@sakfasteners.com",
   },
 ];
 

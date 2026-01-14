@@ -60,8 +60,8 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
-    emails: ["qutub@sakfasteners.com"],
-    phoneNumbers: ["+91-9860040321"],
+    emails: ["sales@sakfasteners.com"],
+    phoneNumbers: ["+91 7737835253"],
   },
   other: {
     "article:publisher": "SAK Fasteners LLP",

@@ -11,7 +11,6 @@ const quickLinks = [
 const geoLinks = [
   { city: "Ahmedabad, India", href: "/contact#ahmedabad" },
   { city: "Dubai, UAE", href: "/contact#dubai" },
-  { city: "Middle East", href: "/contact#middleeast" },
 ];
 
 export function Footer() {
@@ -48,8 +47,8 @@ export function Footer() {
               </Link>
             ))}
           </div>
-          <p className="text-sm text-[var(--muted)]">Phone: +91 91068 86259</p>
-          <p className="text-sm text-[var(--muted)]">Email: info@sakfasteners.com</p>
+          <p className="text-sm text-[var(--muted)]">Phone: +91 7737835253</p>
+          <p className="text-sm text-[var(--muted)]">Email: sales@sakfasteners.com</p>
         </div>
         <div className="space-y-3">
           <div className="text-sm font-semibold text-[var(--paper)] uppercase tracking-wide">Quality</div>

@@ -190,7 +190,7 @@ export default function Home() {
     },
     url: 'https://www.sakfasteners.com',
     telephone: '+91 7737835253',
-    email: 'info@sakfasteners.com',
+    email: 'sales@sakfasteners.com',
     priceRange: '₹₹',
     openingHoursSpecification: [
       {

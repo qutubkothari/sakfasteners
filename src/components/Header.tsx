@@ -23,8 +23,8 @@ export function Header() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-2 text-sm font-medium">
           <span>Manufacturer Since 2014 | India & Middle East | Quality Fasteners</span>
           <div className="flex items-center gap-6">
-            <a href="tel:+919106886259" className="hover:opacity-80 transition">+91 91068 86259</a>
-            <a href="mailto:info@sakfasteners.com" className="hover:opacity-80 transition">info@sakfasteners.com</a>
+            <a href="tel:+917737835253" className="hover:opacity-80 transition">+91 7737835253</a>
+            <a href="mailto:sales@sakfasteners.com" className="hover:opacity-80 transition">sales@sakfasteners.com</a>
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export function Header() {
         <div className="ml-auto flex items-center gap-3 md:ml-8">
           <a
             className="hidden rounded-full border border-[var(--border)] px-4 py-2 text-sm font-semibold text-[var(--paper)] transition hover:border-[var(--accent)] md:inline-flex"
-            href="tel:+919106886259"
+            href="tel:+917737835253"
           >
             Call us
           </a>

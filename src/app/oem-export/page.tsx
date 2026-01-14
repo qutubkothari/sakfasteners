@@ -216,9 +216,10 @@ export default function OEMExportPage() {
           </Link>
         </div>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
-          <div>📧 <a href="mailto:info@sakfasteners.com" className="underline hover:text-white">info@sakfasteners.com</a></div>
-          <div>📞 <a href="tel:+919106886259" className="underline hover:text-white">+91 91068 86259</a></div>
-          <div>📱 <a href="https://wa.me/919106886259" className="underline hover:text-white">WhatsApp</a></div>
+          <div>📧 <a href="mailto:sales@sakfasteners.com" className="underline hover:text-white">sales@sakfasteners.com</a></div>
+          <div>📞 <a href="tel:+917737835253" className="underline hover:text-white">+91 7737835253</a> (India)</div>
+          <div>📞 <a href="tel:+971507055253" className="underline hover:text-white">+971 507055253</a> (Dubai)</div>
+          <div>📱 <a href="https://wa.me/919106886259" className="underline hover:text-white">WhatsApp: +91 9106886259</a></div>
         </div>
       </section>
     </div>
