@@ -120,7 +120,10 @@ export async function POST(req: Request) {
 
     const recentMessages = [...(thread.messages ?? []), { role: "user", content: body.message.trim() }]
       .slice(-10)
-      .map((m) => ({ role: m.role === "assistant" ? "assistant" : "user", content: m.content }));
+      .map((m) => ({ 
+        role: (m.role === "assistant" ? "assistant" : "user") as "user" | "assistant", 
+        content: m.content 
+      }));
 
     const llmMessages: ChatMessage[] = [{ role: "system", content: systemPrompt }, ...recentMessages];
     const reply = await callLLM(llmMessages, provider);
