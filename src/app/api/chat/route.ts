@@ -1,5 +1,13 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import dotenv from "dotenv";
+
+// Ensure server loads env from .env.local in production
+if (process.env.NODE_ENV === "production") {
+  try {
+    dotenv.config({ path: ".env.local" });
+  } catch {}
+}
 
 export const runtime = "nodejs";
 
