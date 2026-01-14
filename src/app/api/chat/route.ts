@@ -105,11 +105,31 @@ export async function POST(req: Request) {
 
     const extractPhone = (text: string): string | undefined => {
       const cleaned = text.replace(/[\u200B-\u200D\uFEFF]/g, "");
-      const m = cleaned.match(/(?<!\d)(\+?\d[\d\s\-]{9,16}\d)(?!\d)/);
-      if (!m) return undefined;
-      const digits = m[1].replace(/[^\d\+]/g, "");
-      if (digits.replace(/\D/g, "").length < 10) return undefined;
-      return digits;
+      // Match Indian numbers: 10 digits with optional +91 or 0 prefix
+      // Also match UAE numbers: 9 digits with +971 prefix
+      const patterns = [
+        /(?:^|\s)(\+91[\s-]?[6-9]\d{9})(?:\s|$)/,  // +91 with 10 digits
+        /(?:^|\s)(91[\s-]?[6-9]\d{9})(?:\s|$)/,    // 91 with 10 digits
+        /(?:^|\s)([6-9]\d{9})(?:\s|$)/,            // 10 digits starting with 6-9
+        /(?:^|\s)(\+971[\s-]?[0-9]{9})(?:\s|$)/,   // UAE +971
+      ];
+      
+      for (const pattern of patterns) {
+        const m = cleaned.match(pattern);
+        if (m) {
+          let phone = m[1].replace(/[\s-]/g, "");
+          // Normalize: ensure +91 prefix for Indian numbers
+          if (/^[6-9]\d{9}$/.test(phone)) {
+            phone = "+91" + phone;
+          } else if (/^91[6-9]\d{9}$/.test(phone)) {
+            phone = "+" + phone;
+          } else if (!phone.startsWith("+")) {
+            phone = "+" + phone;
+          }
+          return phone;
+        }
+      }
+      return undefined;
     };
 
     const extractEmail = (text: string): string | undefined => {
