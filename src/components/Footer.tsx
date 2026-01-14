@@ -60,7 +60,7 @@ export function Footer() {
            <div className="mt-4 space-y-2">
              <div className="text-xs font-semibold text-[var(--paper)] uppercase tracking-wide">Find Us On</div>
              <div className="flex flex-col gap-1 text-xs text-[var(--muted)]">
-               <a href="https://www.indiamart.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-[var(--accent)] transition">
+               <a href="https://www.indiamart.com/pearlfasteners/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-[var(--accent)] transition">
                  <span className="text-green-600">✓</span> IndiaMART
                </a>
                <a href="https://www.justdial.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-[var(--accent)] transition">
