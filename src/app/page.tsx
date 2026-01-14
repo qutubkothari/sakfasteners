@@ -568,7 +568,7 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-white">
               <span className="rounded-full bg-white/20 px-4 py-2">sales@sakfasteners.com</span>
-              <span className="rounded-full bg-white/20 px-4 py-2">+1 (713) 570-0000</span>
+              <span className="rounded-full bg-white/20 px-4 py-2">+91 7737835253</span>
               <span className="rounded-full bg-white/20 px-4 py-2">WhatsApp ready</span>
             </div>
           </div>
