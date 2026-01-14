@@ -18,7 +18,11 @@ export async function GET(req: Request) {
     const reviewedParam = searchParams.get("reviewed");
     const contactedParam = searchParams.get("contacted");
 
-    const where: Record<string, unknown> = {};
+    const where: {
+      createdAt?: { gte?: Date; lte?: Date };
+      reviewed?: boolean;
+      contacted?: boolean;
+    } = {};
 
     if (from || to) {
       where.createdAt = {};
