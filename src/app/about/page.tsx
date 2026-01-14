@@ -87,6 +87,136 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Factory & Manufacturing Images */}
+      <section className="rounded-3xl border border-[var(--border)] bg-gradient-to-br from-white to-[var(--bg)] px-6 py-8">
+        <h2 className="text-2xl font-semibold">Manufacturing Facility & Equipment</h2>
+        <p className="mt-2 text-[var(--muted)]">
+          State-of-the-art production infrastructure in Ahmedabad, Gujarat
+        </p>
+        
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* Production Floor */}
+          <div className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-4 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
+            <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer rounded-lg mb-3">
+              <img 
+                src="/about/production-floor-small.jpg" 
+                alt="Production Floor"
+                className="w-full h-full object-contain"
+              />
+              <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                <img
+                  src="/about/production-floor.jpg"
+                  alt="Production Floor"
+                  className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-[var(--paper)]">Production Floor</h3>
+            <p className="mt-2 text-sm text-[var(--muted)]">Main manufacturing floor with 12 cold heading machines and complete screw production line</p>
+          </div>
+
+          {/* Quality Control */}
+          <div className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-4 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
+            <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer rounded-lg mb-3">
+              <img 
+                src="/about/quality-control-small.jpg" 
+                alt="Quality Control"
+                className="w-full h-full object-contain"
+              />
+              <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                <img
+                  src="/about/quality-control.jpg"
+                  alt="Quality Control"
+                  className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-[var(--paper)]">Quality Control Lab</h3>
+            <p className="mt-2 text-sm text-[var(--muted)]">Testing and inspection facility for hardness, tensile strength, and dimensional accuracy</p>
+          </div>
+
+          {/* Raw Material Storage */}
+          <div className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-4 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
+            <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer rounded-lg mb-3">
+              <img 
+                src="/about/raw-material-storage-small.jpg" 
+                alt="Raw Material Storage"
+                className="w-full h-full object-contain"
+              />
+              <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                <img
+                  src="/about/raw-material-storage.jpg"
+                  alt="Raw Material Storage"
+                  className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-[var(--paper)]">Raw Material Storage</h3>
+            <p className="mt-2 text-sm text-[var(--muted)]">SAE 1008/1018 steel coils and HDPE/PPCP pellet inventory management</p>
+          </div>
+
+          {/* Injection Molding */}
+          <div className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-4 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
+            <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer rounded-lg mb-3">
+              <img 
+                src="/about/injection-molding-small.jpg" 
+                alt="Injection Molding"
+                className="w-full h-full object-contain"
+              />
+              <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                <img
+                  src="/about/injection-molding.jpg"
+                  alt="Injection Molding"
+                  className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-[var(--paper)]">Injection Molding</h3>
+            <p className="mt-2 text-sm text-[var(--muted)]">3 machines for 24/7 continuous plastic wall plug and anchor production</p>
+          </div>
+
+          {/* Threading Machines */}
+          <div className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-4 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
+            <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer rounded-lg mb-3">
+              <img 
+                src="/about/threading-machines-small.jpg" 
+                alt="Threading Machines"
+                className="w-full h-full object-contain"
+              />
+              <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                <img
+                  src="/about/threading-machines.jpg"
+                  alt="Threading Machines"
+                  className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-[var(--paper)]">Threading Machines</h3>
+            <p className="mt-2 text-sm text-[var(--muted)]">Thread rolling and forming equipment for high-strength ISO metric threads</p>
+          </div>
+
+          {/* Plating Unit */}
+          <div className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-4 transition hover:border-[var(--accent)]/40 group relative overflow-visible">
+            <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-visible cursor-pointer rounded-lg mb-3">
+              <img 
+                src="/about/plating-unit-small.jpg" 
+                alt="Zinc Electro-Plating Unit"
+                className="w-full h-full object-contain"
+              />
+              <div className="fixed opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl" style={{top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                <img
+                  src="/about/plating-unit.jpg"
+                  alt="Zinc Electro-Plating Unit"
+                  className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                />
+              </div>
+            </div>
+            <h3 className="text-lg font-semibold text-[var(--paper)]">Zinc Plating Unit</h3>
+            <p className="mt-2 text-sm text-[var(--muted)]">4-tank electro-plating line for 8μm min zinc coating with 100+ hrs salt spray rating</p>
+          </div>
+        </div>
+      </section>
+
       {/* Machinery & Equipment Inventory */}
       <section className="rounded-3xl border border-[var(--border)] bg-white px-6 py-8">
         <h2 className="text-2xl font-semibold">Machinery & In-House Capability</h2>
