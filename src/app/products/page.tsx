@@ -37,7 +37,8 @@ export const metadata: Metadata = {
 const screwProducts = [
   {
     name: "Wood Screws",
-    img: "/products/wood-screws.jpg",
+    img: "/products/wood-screws-small.jpg",
+    hoverImg: "/products/wood-screws.jpg",
     material: "SAE 1008 Low-Carbon Steel",
     finish: "Yellow Zinc / Silver Zinc",
     sizes: "#6, #8, #10, #12 (3/4\" to 3\" lengths)",
@@ -46,7 +47,8 @@ const screwProducts = [
   },
   {
     name: "Chipboard Screws",
-    img: "/products/chipboard-screws.jpg",
+    img: "/products/chipboard-screws-small.jpg",
+    hoverImg: "/products/chipboard-screws.jpg",
     material: "SAE 1018 Medium-Carbon Steel",
     finish: "Yellow Zinc (8μm min)",
     sizes: "3.5mm, 4.0mm, 4.5mm, 5.0mm (16-70mm lengths)",
@@ -55,7 +57,8 @@ const screwProducts = [
   },
   {
     name: "Drywall Screws",
-    img: "/products/drywall-screws.jpg",
+    img: "/products/drywall-screws-small.jpg",
+    hoverImg: "/products/drywall-screws.jpg",
     material: "SAE 1018 Medium-Carbon Steel",
     finish: "Black Phosphate / Black Zinc",
     sizes: "#6 x 1\", #6 x 1.25\", #6 x 1.625\", #8 x 1.25\"",
@@ -64,7 +67,8 @@ const screwProducts = [
   },
   {
     name: "Self-Tapping Screws",
-    img: "/products/self-tapping.jpg",
+    img: "/products/self-tapping-small.jpg",
+    hoverImg: "/products/self-tapping.jpg",
     material: "MS / SS 202 / SS 304 / SS 316",
     finish: "Zinc (MS) | Passivated (SS)",
     sizes: "ST2.9, ST3.5, ST4.2, ST4.8 (10-50mm)",
@@ -76,7 +80,8 @@ const screwProducts = [
 const plasticProducts = [
   {
     name: "Standard Wall Plugs (Fischer Pattern)",
-    img: "/products/wall-plugs.jpg",
+    img: "/products/wall-plugs-small.jpg",
+    hoverImg: "/products/wall-plugs.jpg",
     material: "PPCP / HDPE (100% Virgin)",
     sizes: "S6×30, S8×40, S10×50, S12×60, S14×70",
     loadCapacity: "5-20kg (depending on wall type)",
@@ -85,7 +90,8 @@ const plasticProducts = [
   },
   {
     name: "Nylon Frame Anchors",
-    img: "/products/nylon-anchors.jpg",
+    img: "/products/nylon-anchors-small.jpg",
+    hoverImg: "/products/nylon-anchors.jpg",
     material: "HDPE / Nylon 6 (General-Purpose Grade)",
     sizes: "6×40, 6×60, 8×60, 8×80, 8×100, 8×120, 10×80, 10×100, 10×120, 10×140, 10×160",
     loadCapacity: "25-40kg per anchor (in concrete)",
@@ -134,13 +140,24 @@ export default function ProductsPage() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {screwProducts.map((product, i) => (
-            <div key={i} className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-6 transition hover:border-[var(--accent)]/40">
+            <div key={i} className="card-surface rounded-2xl border-2 border-[var(--accent)]/20 p-6 transition hover:border-[var(--accent)]/40 group relative">
               {product.img && (
-                <img 
-                  src={product.img} 
-                  alt={product.name}
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
+                <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer mb-4 rounded-lg">
+                  <img 
+                    src={product.img} 
+                    alt={product.name}
+                    className="w-full h-full object-contain"
+                  />
+                  {product.hoverImg && (
+                    <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
+                      <img
+                        src={product.hoverImg}
+                        alt={product.name}
+                        className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                      />
+                    </div>
+                  )}
+                </div>
               )}
               <div className="flex items-start justify-between">
                 <h3 className="text-2xl font-semibold text-[var(--accent-strong)]">{product.name}</h3>
@@ -195,12 +212,25 @@ export default function ProductsPage() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {plasticProducts.map((product, i) => (
-            <div key={i} className="card-surface rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50/50 to-white p-6 transition hover:border-blue-300">
+            <div key={i} className="card-surface rounded-2xl border-2 border-blue-200 bg-gradient-to-br from-blue-50/50 to-white p-6 transition hover:border-blue-300 group relative">
               {product.img && (
-                <img 
-                  src={product.img} 
-                  alt={product.name}
-                  className="w-full h-48 object-cover rounded-lg mb-4"
+                <div className="relative aspect-video bg-gradient-to-br from-blue-100/20 to-transparent flex items-center justify-center overflow-hidden cursor-pointer mb-4 rounded-lg">
+                  <img 
+                    src={product.img} 
+                    alt={product.name}
+                    className="w-full h-full object-contain"
+                  />
+                  {product.hoverImg && (
+                    <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
+                      <img
+                        src={product.hoverImg}
+                        alt={product.name}
+                        className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
                 />
               )}
               <div className="flex items-start justify-between">
