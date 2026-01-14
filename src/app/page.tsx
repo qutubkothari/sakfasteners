@@ -51,25 +51,29 @@ const industries = [
     name: "Construction & Infrastructure",
     need: "Reliable anchoring and structural fastening solutions",
     solution: "Frame anchors, wall plugs, and heavy-duty rack bolts for concrete and masonry work.",
-    img: "/industries/construction.jpg",
+    img: "/industries/construction-small.jpg",
+    hoverImg: "/industries/construction.jpg",
   },
   {
     name: "Electrical & Sanitary",
     need: "Corrosion-resistant mounting for wet environments",
     solution: "Stainless steel screws with rust-proof finishes for long-lasting electrical and plumbing installations.",
-    img: "/industries/electrical.jpg",
+    img: "/industries/electrical-small.jpg",
+    hoverImg: "/industries/electrical.jpg",
   },
   {
     name: "Furniture & Interior",
     need: "Clean installation with concealed fastening",
     solution: "Drywall screws and plastic plugs for professional furniture assembly and interior finishing.",
-    img: "/industries/furniture.jpg",
+    img: "/industries/furniture-small.jpg",
+    hoverImg: "/industries/furniture.jpg",
   },
   {
     name: "uPVC & Window Systems",
     need: "Non-corrosive fasteners for aluminum and uPVC frames",
     solution: "Self-drilling and self-tapping screws designed for window and door frame installations.",
-    img: "/industries/upvc.jpg",
+    img: "/industries/upvc-small.jpg",
+    hoverImg: "/industries/upvc.jpg",
   },
 ];
 
@@ -445,10 +449,10 @@ export default function Home() {
                 )}
               </div>
               {/* Hover Popup - Positioned relative to card */}
-              {item.img && (
+              {item.hoverImg && (
                 <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
                   <img
-                    src={item.img}
+                    src={item.hoverImg}
                     alt={item.name}
                     className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
                   />
