@@ -165,6 +165,15 @@ export async function POST(req: Request) {
 
     const autoPhone = !thread.phone ? extractPhone(body.message) : undefined;
     const autoEmail = !thread.email ? extractEmail(body.message) : undefined;
+    
+    console.log("Auto-extraction debug:", { 
+      message: body.message, 
+      autoPhone, 
+      autoEmail, 
+      existingPhone: thread.phone,
+      existingEmail: thread.email 
+    });
+    
     if (autoPhone || autoEmail || sanitizedName || sanitizedPhone || sanitizedEmail) {
       await prisma.thread.update({
         where: { id: thread.id },
