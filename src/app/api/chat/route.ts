@@ -26,6 +26,7 @@ type ChatRequest = {
   threadId?: string;
   name?: string;
   phone?: string;
+  email?: string;
   source?: string;
 };
 
@@ -99,7 +100,22 @@ export async function POST(req: Request) {
     }
 
     const sanitizedName = body.name?.slice(0, 80);
-    const sanitizedPhone = body.phone?.slice(0, 30);
+    const sanitizedPhone = body.phone?.slice(0, 40);
+    const sanitizedEmail = body.email?.slice(0, 120);
+
+    const extractPhone = (text: string): string | undefined => {
+      const cleaned = text.replace(/[\u200B-\u200D\uFEFF]/g, "");
+      const m = cleaned.match(/(?<!\d)(\+?\d[\d\s\-]{9,16}\d)(?!\d)/);
+      if (!m) return undefined;
+      const digits = m[1].replace(/[^\d\+]/g, "");
+      if (digits.replace(/\D/g, "").length < 10) return undefined;
+      return digits;
+    };
+
+    const extractEmail = (text: string): string | undefined => {
+      const m = text.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+      return m ? m[0] : undefined;
+    };
 
     const existingThread = body.threadId
       ? await prisma.thread.findUnique({
@@ -114,6 +130,7 @@ export async function POST(req: Request) {
         data: {
           name: sanitizedName,
           phone: sanitizedPhone,
+          email: sanitizedEmail,
         },
         include: { messages: true },
       }));
@@ -125,6 +142,19 @@ export async function POST(req: Request) {
         threadId: thread.id,
       },
     });
+
+    const autoPhone = !thread.phone && extractPhone(body.message);
+    const autoEmail = !thread.email && extractEmail(body.message);
+    if (autoPhone || autoEmail || sanitizedName || sanitizedPhone || sanitizedEmail) {
+      await prisma.thread.update({
+        where: { id: thread.id },
+        data: {
+          name: thread.name ?? sanitizedName,
+          phone: thread.phone ?? sanitizedPhone ?? autoPhone,
+          email: thread.email ?? sanitizedEmail ?? autoEmail,
+        },
+      });
+    }
 
     const recentMessages = [...(thread.messages ?? []), { role: "user", content: body.message.trim() }]
       .slice(-10)

@@ -49,6 +49,7 @@ export async function GET(req: Request) {
       id: t.id,
       name: t.name,
       phone: t.phone,
+      email: t.email,
       createdAt: t.createdAt,
       reviewed: t.reviewed,
       contacted: t.contacted,

@@ -12,6 +12,7 @@ model Thread {
   createdAt DateTime  @default(now())
   name      String?
   phone     String?
+  email     String?
   reviewed  Boolean   @default(false)
   contacted Boolean   @default(false)
   contactedAt DateTime?

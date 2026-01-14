@@ -6,6 +6,7 @@ type ThreadListItem = {
   id: string;
   name?: string | null;
   phone?: string | null;
+  email?: string | null;
   createdAt: string;
   reviewed: boolean;
   contacted: boolean;
@@ -68,6 +69,7 @@ export default function ClientsAdmin() {
         id: string;
         name?: string | null;
         phone?: string | null;
+        email?: string | null;
         createdAt: string;
         reviewed: boolean;
         contacted: boolean;
@@ -78,6 +80,7 @@ export default function ClientsAdmin() {
         id: full.id,
         name: full.name,
         phone: full.phone,
+        email: full.email,
         createdAt: full.createdAt,
         reviewed: full.reviewed,
         contacted: full.contacted,
@@ -162,7 +165,8 @@ export default function ClientsAdmin() {
             <tr>
               <th className="px-3 py-2">Date</th>
               <th className="px-3 py-2">Name</th>
-              <th className="px-3 py-2">Phone</th>
+              <th className="px-3 py-2">Mobile</th>
+              <th className="px-3 py-2">Email</th>
               <th className="px-3 py-2">Last Message</th>
               <th className="px-3 py-2">Count</th>
               <th className="px-3 py-2">Reviewed</th>
@@ -190,6 +194,7 @@ export default function ClientsAdmin() {
                 <td className="px-3 py-2 text-xs text-[var(--muted)]">{fmt(t.createdAt)}</td>
                 <td className="px-3 py-2">{t.name || "—"}</td>
                 <td className="px-3 py-2">{t.phone || "—"}</td>
+                <td className="px-3 py-2">{t.email || "—"}</td>
                 <td className="px-3 py-2 truncate" title={t.lastMessagePreview}>{t.lastMessagePreview}</td>
                 <td className="px-3 py-2">{t.messageCount}</td>
                 <td className="px-3 py-2">
@@ -225,7 +230,7 @@ export default function ClientsAdmin() {
           <div className="mb-3 flex items-center justify-between">
             <div>
               <div className="text-lg font-semibold">Conversation</div>
-              <div className="text-sm text-[var(--muted)]">{selected.name || "—"} • {selected.phone || "—"}</div>
+              <div className="text-sm text-[var(--muted)]">{selected.name || "—"} • {selected.phone || "—"} • {selected.email || "—"}</div>
             </div>
             <button className="text-sm underline" onClick={() => setSelected(null)}>Close</button>
           </div>
