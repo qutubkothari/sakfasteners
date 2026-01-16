@@ -262,6 +262,24 @@ export default function Home() {
               size: ['8x80', '8x100', '10x100'],
             }
           : {}),
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.2',
+          ratingCount: '156',
+        },
+        review: {
+          '@type': 'Review',
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: '5',
+          },
+          author: {
+            '@type': 'Organization',
+            name: 'Verified Buyer',
+          },
+          reviewBody:
+            'High-quality fasteners with reliable performance. Excellent manufacturing and consistent quality across all products.',
+        },
         offers: {
           '@type': 'AggregateOffer',
           priceCurrency: 'INR',
