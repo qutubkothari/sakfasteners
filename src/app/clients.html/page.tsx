@@ -1,15 +1,6 @@
 "use client";
 
-import { Metadata } from "next";
 import { useEffect, useMemo, useState } from "react";
-
-// Prevent indexing of admin page
-export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
 
 type ThreadListItem = {
   id: string;
