@@ -265,6 +265,9 @@ export default function Home() {
         offers: {
           '@type': 'AggregateOffer',
           priceCurrency: 'INR',
+          lowPrice: '5',
+          highPrice: '500',
+          offerCount: '1',
           availability: 'https://schema.org/InStock',
           seller: {
             '@type': 'Organization',
