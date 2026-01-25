@@ -87,7 +87,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Factory & Manufacturing Images */}
+      {/* Factory & Manufacturing Images - TEMPORARILY HIDDEN UNTIL IMAGES ARE ADDED */}
+      {false && (
       <section className="rounded-3xl border border-[var(--border)] bg-gradient-to-br from-white to-[var(--bg)] px-6 py-8">
         <h2 className="text-2xl font-semibold">Manufacturing Facility & Equipment</h2>
         <p className="mt-2 text-[var(--muted)]">
@@ -216,6 +217,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Machinery & Equipment Inventory */}
       <section className="rounded-3xl border border-[var(--border)] bg-white px-6 py-8">
