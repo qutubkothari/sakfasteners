@@ -311,30 +311,31 @@ export default function Home() {
 
   return (
     <div className="space-y-20">
-      {/* Animated Banner - Uses GIF until videos are added */}
+      {/* Animated Banner - Uses MP4/WebM with GIF fallback */}
       <section className="overflow-hidden rounded-3xl border border-[var(--border)] shadow-lg">
         <video 
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-auto object-cover"
-          style={{ maxHeight: "700px" }}
+          className="w-full h-auto"
+          style={{ display: 'block' }}
         >
           <source src="/hero/products.webm" type="video/webm" />
           <source src="/hero/products.mp4" type="video/mp4" />
         </video>
-        {/* Fallback GIF (shows until videos are added) */}
-        <Image 
-          src="/hero/products.gif" 
-          alt="SAK Fasteners - Drywall Screws Manufacturing"
-          className="w-full h-auto object-cover -mt-[700px]"
-          style={{ maxHeight: "700px" }}
-          priority
-          width={1920}
-          height={700}
-          unoptimized
-        />
+        {/* Fallback GIF (shows if videos fail to load) */}
+        <noscript>
+          <Image 
+            src="/hero/products.gif" 
+            alt="SAK Fasteners - Drywall Screws Manufacturing"
+            className="w-full h-auto"
+            priority
+            width={1920}
+            height={700}
+            unoptimized
+          />
+        </noscript>
       </section>
 
       {/* Hero Content Section */}
