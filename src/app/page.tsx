@@ -1,5 +1,5 @@
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 const productCategories = [
   {
@@ -313,13 +313,16 @@ export default function Home() {
     <div className="space-y-20">
       {/* Animated Banner Image */}
       <section className="overflow-hidden rounded-3xl border border-[var(--border)] shadow-lg">
-        <img 
-          src="/hero/products.gif?v=639039425262350067" 
+        <Image 
+          src="/hero/products.gif" 
           alt="SAK Fasteners - Drywall Screws Manufacturing"
           className="w-full h-auto object-cover"
           style={{ maxHeight: "700px" }}
-          loading="eager"
+          priority
+          width={1920}
+          height={700}
           key="hero-banner-gif"
+          unoptimized
         />
       </section>
 
@@ -406,10 +409,12 @@ export default function Home() {
             <div key={item.title} className="card-surface rounded-2xl overflow-visible group relative">
               <div className="relative h-64 bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer p-4">
                 {item.img ? (
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.title}
                     className="w-full h-full object-contain"
+                    width={400}
+                    height={256}
                   />
                 ) : (
                   <span className="text-sm text-[var(--muted)]">Product Image</span>
@@ -418,10 +423,12 @@ export default function Home() {
               {/* Hover Popup - Positioned relative to card */}
               {item.img && (
                 <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
-                  <img
+                  <Image
                     src={item.hoverImg || item.img}
                     alt={item.title}
                     className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                    width={800}
+                    height={600}
                   />
                 </div>
               )}
@@ -460,10 +467,12 @@ export default function Home() {
             <div key={item.name} className="card-surface rounded-2xl overflow-visible group relative">
               <div className="relative aspect-video bg-gradient-to-br from-[var(--accent)]/5 to-transparent flex items-center justify-center overflow-hidden cursor-pointer">
                 {item.img ? (
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.name}
                     className="w-full h-full object-contain"
+                    width={600}
+                    height={338}
                   />
                 ) : (
                   <span className="text-sm text-[var(--muted)]">Industry Image</span>
@@ -472,10 +481,12 @@ export default function Home() {
               {/* Hover Popup - Positioned relative to card */}
               {item.hoverImg && (
                 <div className="absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto z-50 shadow-2xl">
-                  <img
+                  <Image
                     src={item.hoverImg}
                     alt={item.name}
                     className="w-[800px] h-[600px] object-contain border-4 border-white rounded-lg bg-white"
+                    width={800}
+                    height={600}
                   />
                 </div>
               )}

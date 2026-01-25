@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -30,16 +31,17 @@ export function Header() {
       </div>
       <div className="mx-auto flex max-w-6xl items-center gap-6 px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <img 
+          <Image 
             src="/logo.png" 
             alt="SAK Fasteners Logo" 
             className="h-12 w-12 object-contain"
             width={48}
             height={48}
+            priority
           />
           <div className="leading-tight">
             <div className="text-base font-semibold tracking-tight text-[var(--paper)]">SAK Fasteners</div>
-            <div className="text-sm text-[var(--muted)]">Metal & Plastic Fasteners</div>
+            <div className="text-sm text-[#4b5563] font-medium">Metal & Plastic Fasteners</div>
           </div>
         </Link>
         <nav className="ml-auto hidden items-center gap-6 text-sm font-semibold md:flex">
