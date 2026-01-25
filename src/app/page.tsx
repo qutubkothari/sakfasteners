@@ -311,19 +311,29 @@ export default function Home() {
 
   return (
     <div className="space-y-20">
-      {/* Animated Banner Image */}
-      <section className="overflow-hidden rounded-3xl border border-[var(--border)] shadow-lg">
-        <Image 
-          src="/hero/products.gif" 
-          alt="SAK Fasteners - Drywall Screws Manufacturing"
+      {/* Animated Banner - Video (Optimized) */}
+      <section className="overflow-hidden rounded-3xl border border-[var(--border)] shadow-lg bg-black">
+        <video 
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-auto object-cover"
           style={{ maxHeight: "700px" }}
-          priority
-          width={1920}
-          height={700}
-          key="hero-banner-gif"
-          unoptimized
-        />
+          poster="/hero/products-poster.jpg"
+        >
+          <source src="/hero/products.webm" type="video/webm" />
+          <source src="/hero/products.mp4" type="video/mp4" />
+          {/* Fallback to GIF if videos not available */}
+          <Image 
+            src="/hero/products.gif" 
+            alt="SAK Fasteners - Drywall Screws Manufacturing"
+            className="w-full h-auto object-cover"
+            width={1920}
+            height={700}
+            unoptimized
+          />
+        </video>
       </section>
 
       {/* Hero Content Section */}
