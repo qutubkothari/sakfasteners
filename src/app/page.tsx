@@ -311,8 +311,8 @@ export default function Home() {
 
   return (
     <div className="space-y-20">
-      {/* Animated Banner - Video (Optimized) */}
-      <section className="overflow-hidden rounded-3xl border border-[var(--border)] shadow-lg bg-black">
+      {/* Animated Banner - Uses GIF until videos are added */}
+      <section className="overflow-hidden rounded-3xl border border-[var(--border)] shadow-lg">
         <video 
           autoPlay
           loop
@@ -320,20 +320,21 @@ export default function Home() {
           playsInline
           className="w-full h-auto object-cover"
           style={{ maxHeight: "700px" }}
-          poster="/hero/products-poster.jpg"
         >
           <source src="/hero/products.webm" type="video/webm" />
           <source src="/hero/products.mp4" type="video/mp4" />
-          {/* Fallback to GIF if videos not available */}
-          <Image 
-            src="/hero/products.gif" 
-            alt="SAK Fasteners - Drywall Screws Manufacturing"
-            className="w-full h-auto object-cover"
-            width={1920}
-            height={700}
-            unoptimized
-          />
         </video>
+        {/* Fallback GIF (shows until videos are added) */}
+        <Image 
+          src="/hero/products.gif" 
+          alt="SAK Fasteners - Drywall Screws Manufacturing"
+          className="w-full h-auto object-cover -mt-[700px]"
+          style={{ maxHeight: "700px" }}
+          priority
+          width={1920}
+          height={700}
+          unoptimized
+        />
       </section>
 
       {/* Hero Content Section */}
