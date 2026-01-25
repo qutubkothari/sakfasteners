@@ -5,8 +5,16 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { ChatWidget } from "@/components/ChatWidget";
 
-const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
-const body = Manrope({ subsets: ["latin"], variable: "--font-body" });
+const display = Space_Grotesk({ 
+  subsets: ["latin"], 
+  variable: "--font-display",
+  display: "swap",
+});
+const body = Manrope({ 
+  subsets: ["latin"], 
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sakfasteners.com"),
