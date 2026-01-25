@@ -23,6 +23,7 @@ Allow: /
 User-agent: *
 Allow: /
 Disallow: /api
+Disallow: /clients.html
 
 Sitemap: ${baseUrl}/sitemap.xml
 Host: ${baseUrl}

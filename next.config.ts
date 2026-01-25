@@ -1,7 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Link',
+            value: '<https://www.sakfasteners.com>; rel="canonical"',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
